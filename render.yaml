@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: click-earn-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        value: your_bot_token_here
